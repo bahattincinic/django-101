@@ -18,14 +18,17 @@ class HomeView(TemplateView):
 
 class PresentationDetailView(DetailView):
     model = Presentation
+    template_name = 'presentation/detail.html'
 
 
 class PresentationListView(ListView):
     model = Presentation
+    template_name = 'presentation/list.html'
 
 
 class CategoryDetailView(DetailView):
     model = Category
+    template_name = 'presentation/category_detail.html'
 
     def get_context_data(self, **kwargs):
         context = super(CategoryDetailView, self).get_context_data(**kwargs)

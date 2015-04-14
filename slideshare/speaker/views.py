@@ -6,7 +6,9 @@ from .models import Speaker
 
 class SpeakerDetailView(DetailView):
     model = Speaker
+    template_name = 'speaker/detail.html'
 
 
 class SpeakerListView(ListView):
     model = Speaker
+    template_name = 'speaker/list.html'
