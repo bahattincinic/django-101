@@ -1,4 +1,5 @@
-# Django 101 Uygulaması
+![django101av_400x400a](https://cloud.githubusercontent.com/assets/1684999/7142166/27a82dc8-e2df-11e4-8537-d4db8ab90b3c.png)
+
 
 Istanbul Şehir Üniversitesi Django 101 sunumu örnek uygulaması.
 
