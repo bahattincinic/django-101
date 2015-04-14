@@ -1,0 +1,89 @@
+[
+{
+  "fields": {
+    "name": "Engineering"
+  },
+  "model": "presentation.category",
+  "pk": 1
+},
+{
+  "fields": {
+    "name": "Development"
+  },
+  "model": "presentation.category",
+  "pk": 2
+},
+{
+  "fields": {
+    "name": "Python"
+  },
+  "model": "presentation.category",
+  "pk": 3
+},
+{
+  "fields": {
+    "name": "Javascript"
+  },
+  "model": "presentation.category",
+  "pk": 4
+},
+{
+  "fields": {
+    "link": "https://slides.com/bahattincinic/django-introduction",
+    "speaker": 1,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n",
+    "categories": [
+      1,
+      2,
+      3
+    ],
+    "title": "Django Introduction"
+  },
+  "model": "presentation.presentation",
+  "pk": 1
+},
+{
+  "fields": {
+    "link": "http://slides.com/bahattincinic/angularjs-ile-coklu-dil-destegi-veren-web-uygulamalari-gelistirmek",
+    "speaker": 1,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n",
+    "categories": [
+      1,
+      2,
+      4
+    ],
+    "title": "AngularJS ile \u00c7oklu Dil Deste\u011fi Veren Web Uygulamalar\u0131 Geli\u015ftirmek"
+  },
+  "model": "presentation.presentation",
+  "pk": 2
+},
+{
+  "fields": {
+    "link": "https://slides.com/hwclass/angualrjs-bootcamp-angularjs-firebase",
+    "speaker": 2,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n",
+    "categories": [
+      2,
+      4
+    ],
+    "title": "Angular.js + Firebase"
+  },
+  "model": "presentation.presentation",
+  "pk": 3
+},
+{
+  "fields": {
+    "link": "https://slides.com/hwclass/modern-development-makes-easy",
+    "speaker": 2,
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n",
+    "categories": [
+      1,
+      2,
+      4
+    ],
+    "title": "Modern Development Makes Easy"
+  },
+  "model": "presentation.presentation",
+  "pk": 4
+}
+]

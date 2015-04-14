@@ -40,3 +40,12 @@ Istanbul Şehir Üniversitesi Django 101 sunumu örnek uygulaması.
 **Testlerin çalıştırılması**
 
     python manage.py test
+
+**Admin için Superuser oluşturmak**
+
+    python manage.py createsuperuser
+
+**Örnek Verileri içeri aktarmak için**
+
+    python manage.py loadata speaker
+    python manage.py loadata presentation

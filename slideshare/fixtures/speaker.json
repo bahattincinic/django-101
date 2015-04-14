@@ -1,0 +1,20 @@
+[
+{
+  "fields": {
+    "first_name": "Bahattin",
+    "last_name": "\u00c7ini\u00e7",
+    "email": "bahattincinic@gmail.com"
+  },
+  "model": "speaker.speaker",
+  "pk": 1
+},
+{
+  "fields": {
+    "first_name": "Bar\u0131\u015f",
+    "last_name": "G\u00fcler",
+    "email": "barisguler@gmail.com"
+  },
+  "model": "speaker.speaker",
+  "pk": 2
+}
+]
