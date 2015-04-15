@@ -1,0 +1,18 @@
+{% extends "dashboard.html" %}
+
+{% block title %} - {{ object.name }}{% endblock title %}
+
+{% block content %}
+    <h3>{{ object.name }} ({{ object_list.count }})</h3>
+    <div class="row" style="margin-left:5px">
+        {% for object in object_list %}
+            <div class="well well-sm">
+                <b><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></b>
+                <p>{{ object.description|truncatechars:100 }}...</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include "pagination.html" %}
+
+{% endblock content %}

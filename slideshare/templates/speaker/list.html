@@ -1,0 +1,28 @@
+{% extends "dashboard.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+    <h3>Konuşmacılar</h3>
+
+    <div class="row">
+    {% for object in object_list %}
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <img src="{% static "images/default.jpg" %}" width="300">
+              <div class="caption">
+                <h4>{{ object.get_fullname }}</h4>
+                <p>
+                    <a href="{{ object.get_absolute_url}}" class="btn btn-primary" role="button">
+                      Profiline Git
+                    </a>
+                </p>
+              </div>
+            </div>
+          </div>
+    {% endfor %}
+    </div>
+
+    {% include "pagination.html" %}
+
+{% endblock content %}

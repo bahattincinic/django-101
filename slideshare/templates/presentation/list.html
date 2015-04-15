@@ -1,0 +1,13 @@
+{% extends "dashboard.html" %}
+
+{% block content %}
+    <h3>Sunumlar</h3>
+    <div class="row" style="margin-left:5px">
+        {% for object in object_list %}
+            <div class="well well-sm">
+                <b><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></b>
+                <p>{{ object.description|truncatechars:100 }}...</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

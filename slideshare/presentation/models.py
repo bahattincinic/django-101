@@ -20,7 +20,8 @@ class Category(models.Model):
 @python_2_unicode_compatible
 class Presentation(models.Model):
     title = models.CharField(max_length=255)
-    speaker = models.ForeignKey('speaker.Speaker')
+    speaker = models.ForeignKey('speaker.Speaker',
+                                related_name='presentations')
     link = models.URLField()
     description = models.TextField()
     categories = models.ManyToManyField(Category)

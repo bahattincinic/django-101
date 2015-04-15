@@ -1,13 +1,16 @@
 {% extends "dashboard.html" %}
 
 {% load staticfiles %}
+{% load url from future %}
 
 {% block content %}
-    <div class="container">
         <div class="jumbotron">
           <h1>Django 101</h1>
           <p>
-              Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.
+              Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.
+              Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı
+              oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden
+              beri endüstri standardı sahte metinler olarak kullanılmıştır.
           </p>
           <p>
               <a class="btn btn-primary btn-lg" href="{% url 'presentation-list' %}" role="button">
@@ -51,7 +54,5 @@
                   </div>
                 </div>
             </div>
-
         </div>
-    </div>
 {% endblock content %}

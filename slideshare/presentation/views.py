@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
+from django.views.generic.detail import SingleObjectMixin
 
 from .models import Presentation, Category
 from speaker.models import Speaker
@@ -26,11 +27,18 @@ class PresentationListView(ListView):
     template_name = 'presentation/list.html'
 
 
-class CategoryDetailView(DetailView):
-    model = Category
+class CategoryDetailView(SingleObjectMixin, ListView):
+    paginate_by = 12
     template_name = 'presentation/category_detail.html'
+
+    def get(self, request, *args, **kwargs):
+        self.object = self.get_object(queryset=Category.objects.all())
+        return super(CategoryDetailView, self).get(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super(CategoryDetailView, self).get_context_data(**kwargs)
-        context['presentations'] = self.object.presentation_set.all()
+        context['object'] = self.object
         return context
+
+    def get_queryset(self):
+        return self.object.presentation_set.all()

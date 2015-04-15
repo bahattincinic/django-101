@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load url from future %}
+
+{% block body %}
+    <div class="container">
+        <h1>404</h1>
+        <p>Aradığınız Sayfa Bulunamadı</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'home' %}" role="button">
+            Ana Sayfaya Git
+        </a>
+    </div>
+{% endblock body %}

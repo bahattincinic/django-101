@@ -1,0 +1,30 @@
+{% extends "dashboard.html" %}
+
+{% load staticfiles %}
+
+{% block title %} - {{ object.get_fullname }}{% endblock title %}
+
+{% block content %}
+<div class="row">
+ <div class="col-sm-3 col-md-3">
+    <div class="thumbnail" style="border:none">
+      <img src="{% static "images/default.jpg" %}" width="300">
+      <div class="caption">
+        <h4>{{ object.get_fullname }}</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <ul>
+        {% for presentation in object.presentations.all %}
+            <li>
+                <a href="{{ presentation.get_absolute_url }}">
+                    {{ presentation.title }}
+                </a>
+                <p>{{ presentation.description|truncatechars:100 }}...</p>
+            </li>
+        {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock content %}

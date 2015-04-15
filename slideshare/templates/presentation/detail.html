@@ -1,0 +1,22 @@
+{% extends "dashboard.html" %}
+
+{% block content %}
+    <h3>{{ object.title }}</h3>
+    <p>
+        {{ object.description }}
+    </p>
+
+    <b>Adres:</b> <br>
+    <a href="{{ object.link }}" target="_blank">{{ object.link }}</a> <br>
+    <b>Konuşmacı:</b>
+    <br>
+    <a href="{{ object.speaker.get_absolute_url }}">
+        {{ object.speaker.get_fullname }}
+    </a>
+    <br>
+    <b>Kategoriler:</b>
+    <br>
+    {% for category in object.categories.all %}
+        <a href="{{ category.get_absolute_url }}">{{ category.name }}</a>,
+    {% endfor %}
+{% endblock content %}

@@ -12,3 +12,4 @@ class SpeakerDetailView(DetailView):
 class SpeakerListView(ListView):
     model = Speaker
     template_name = 'speaker/list.html'
+    paginate_by = 12
