@@ -11,8 +11,8 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        context['speakers'] = Speaker.objects.all()[:10]
-        context['presentations'] = Presentation.objects.all()[:10]
+        context['speakers'] = Speaker.objects.order_by('-id')[:10]
+        context['presentations'] = Presentation.objects.order_by('-id')[:10]
         return context
 
 

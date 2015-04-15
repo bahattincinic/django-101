@@ -61,3 +61,4 @@ settings_local.py
 *.db
 *.sqlite3
 media/
+*.DS_Store

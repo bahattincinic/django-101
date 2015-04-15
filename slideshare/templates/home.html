@@ -1,5 +1,57 @@
 {% extends "dashboard.html" %}
 
-{% block content %}
+{% load staticfiles %}
 
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+          <h1>Django 101</h1>
+          <p>
+              Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır.
+          </p>
+          <p>
+              <a class="btn btn-primary btn-lg" href="{% url 'presentation-list' %}" role="button">
+                Tüm Sunumlar
+              </a>
+          </p>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                  <div class="panel-heading" style="background-color: #34495E">
+                    Son Gönderilen Sunumlar
+                  </div>
+                  <div class="panel-body">
+                    <ul>
+                        {% for presentation in presentations %}
+                            <li>
+                                <a href="{{ presentation.get_absolute_url }}">
+                                    {{ presentation.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="panel panel-primary">
+                  <div class="panel-heading" style="background-color: #34495E">
+                    Son Eklenen Konuşmacılar
+                  </div>
+                  <div class="panel-body">
+                        {% for speaker in speakers %}
+                            <li>
+                                <a href="{{ speaker.get_absolute_url }}">
+                                    {{ speaker.get_fullname }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 {% endblock content %}
