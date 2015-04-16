@@ -3,6 +3,8 @@
 
 Istanbul Şehir Üniversitesi Django 101 sunumu örnek uygulaması.
 
+[![Build Status](https://travis-ci.org/bahattincinic/django-101.svg?branch=master)](https://travis-ci.org/bahattincinic/django-101)
+
 **Sunum:** http://slides.com/bahattincinic/django-introduction/
 
 ### Kurulum
