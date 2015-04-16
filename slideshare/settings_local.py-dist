@@ -19,10 +19,3 @@ MIDDLEWARE_CLASSES += (
 DEBUG_TOOLBAR_CONFIG = {
     'DISABLE_PANELS': set(['debug_toolbar.panels.redirects.RedirectsPanel']),
 }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
