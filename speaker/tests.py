@@ -9,12 +9,12 @@ class SpeakerTest(PresentationTestMixin, TestCase):
     def test_speaker_list(self):
         response = self.client.get(reverse('speaker-list'))
         self.assertEqual(response.status_code, 200)
-        self.assertRegexpMatches(response.content, self.speaker.get_fullname())
+        self.assertContains(response, self.speaker.get_fullname())
 
     def test_speaker_detail(self):
         response = self.client.get(self.speaker.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertRegexpMatches(response.content, self.speaker.get_fullname())
+        self.assertContains(response, self.speaker.get_fullname())
 
     def test_speaker_invalid(self):
         response = self.client.get(reverse('speaker-detail', args=[111]))

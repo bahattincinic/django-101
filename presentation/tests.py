@@ -25,8 +25,8 @@ class HomeViewTest(PresentationTestMixin, TestCase):
 
     def test_homepage(self):
         response = self.client.get(reverse('home'))
-        self.assertRegexpMatches(response.content, self.speaker.get_fullname())
-        self.assertRegexpMatches(response.content, self.presentation.title)
+        self.assertContains(response, self.speaker.get_fullname())
+        self.assertContains(response, self.presentation.title)
         self.assertEqual(response.status_code, 200)
 
 
@@ -35,7 +35,7 @@ class PresentationTest(PresentationTestMixin, TestCase):
     def test_presentation_detail(self):
         response = self.client.get(self.presentation.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertRegexpMatches(response.content, self.presentation.title)
+        self.assertContains(response, self.presentation.title)
 
     def test_presentation_invalid(self):
         response = self.client.get(reverse('presentation-detail', args=[111]))
@@ -44,7 +44,7 @@ class PresentationTest(PresentationTestMixin, TestCase):
     def test_presentation_list(self):
         response = self.client.get(reverse('presentation-list'))
         self.assertEqual(response.status_code, 200)
-        self.assertRegexpMatches(response.content, self.presentation.title)
+        self.assertContains(response, self.presentation.title)
 
     def test_method_not_allowed(self):
         response_list = self.client.post(reverse('presentation-list'))
@@ -58,8 +58,8 @@ class PresentationTest(PresentationTestMixin, TestCase):
     def test_category_detail(self):
         response = self.client.get(self.category.get_absolute_url())
         self.assertEqual(response.status_code, 200)
-        self.assertRegexpMatches(response.content, self.category.name)
-        self.assertRegexpMatches(response.content, self.presentation.title)
+        self.assertContains(response, self.category.name)
+        self.assertContains(response, self.presentation.title)
 
     def test_category_invalid(self):
         response = self.client.get(reverse('category-detail', args=[111]))
