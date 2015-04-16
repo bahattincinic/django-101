@@ -7,6 +7,8 @@ Istanbul Şehir Üniversitesi Django 101 sunumu örnek uygulaması.
 
 **Sunum:** http://slides.com/bahattincinic/django-introduction/
 
+**Ekran Görüntüleri:** [Link](screenshots.md)
+
 ### Kurulum
 
 **Pip ve virtualenv kurulumu**
