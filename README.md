@@ -30,7 +30,7 @@ Istanbul Şehir Üniversitesi Django 101 sunumu örnek uygulaması.
 
 **Ayarların özelleştirilmesi**
 
-    cp django-101/slideshare/settings/settings_local.py.ex django-101/slideshare/settings/settings_local.py
+    cp django-101/slideshare/settings/settings_local.py-dist django-101/slideshare/settings/settings_local.py
 
 **Migrationların yapılması ve Projenin çalıştırılması**
 
