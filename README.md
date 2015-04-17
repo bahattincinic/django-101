@@ -26,7 +26,7 @@ Istanbul Şehir Üniversitesi Django 101 sunumu örnek uygulaması.
 **Proje klonlanması ve gereksinimlerin kurulması**
 
     git clone git@github.com:bahattincinic/django-101.git
-    pip install -r django-101/requirements/local.txt
+    pip install -r django-101/requirements/dev.txt
 
 **Ayarların özelleştirilmesi**
 
