@@ -48,5 +48,5 @@ Istanbul Şehir Üniversitesi Django 101 sunumu örnek uygulaması.
 
 **Örnek Verileri içeri aktarmak için**
 
-    python manage.py loadata speaker
-    python manage.py loadata presentation
+    python manage.py loaddata speaker
+    python manage.py loaddata presentation
